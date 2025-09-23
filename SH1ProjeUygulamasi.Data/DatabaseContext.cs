@@ -4,7 +4,7 @@ using SH1ProjeUygulamasi.Core.Entities;
 
 namespace SH1ProjeUygulamasi.Data
 {
-    //pm add migration InitialCreate
+    //pm add-migration InitialCreate
     //pm update-database
     public class DatabaseContext : DbContext
     {
