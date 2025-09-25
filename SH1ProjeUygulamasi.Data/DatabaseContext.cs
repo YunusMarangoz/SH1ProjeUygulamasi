@@ -4,12 +4,11 @@ using SH1ProjeUygulamasi.Core.Entities;
 
 namespace SH1ProjeUygulamasi.Data
 {
-    //pm add-migration InitialCreate
-    //pm update-database
     public class DatabaseContext : DbContext
     {
         public DbSet<Category> Categories { get; set; }
         public DbSet<Product> Products { get; set; }
+        public DbSet<ProductImage> ProductImages { get; set; }
         public DbSet<Slider> Sliders { get; set; }
         public DbSet<User> Users { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
