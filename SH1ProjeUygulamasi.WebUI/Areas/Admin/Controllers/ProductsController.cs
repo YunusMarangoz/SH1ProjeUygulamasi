@@ -22,8 +22,8 @@ namespace SH1ProjeUygulamasi.WebUI.Areas.Admin.Controllers
         // GET: ProductsController
         public ActionResult Index()
         {
-            // return View(_context.Products.Include("Category")); // 1. yol string olarak include etmek
-            return View(_context.Products.Include(p => p.Category)); // 2. yol lambda ile include etmek
+            // return View(_context.Products.Include("Category")); // 1. yol string olarak include etmek           
+            return View(_context.Products.Include(p=>p.Category)); // 2. yol lambda ile include etmek
         }
 
         // GET: ProductsController/Details/5
