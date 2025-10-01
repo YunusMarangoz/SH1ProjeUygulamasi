@@ -23,6 +23,8 @@ namespace SH1ProjeUygulamasi.WebUI
 
             builder.Services.AddTransient<IProductService, ProductService>(); // Servisi buraya tan�tmazsak hata al�r�z!!!
 
+            builder.Services.AddScoped<IUserService, UserService>();
+
             builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie();
 
             var app = builder.Build();
