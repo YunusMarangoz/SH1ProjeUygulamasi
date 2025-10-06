@@ -6,25 +6,25 @@ namespace SH1ProjeUygulamasi.WebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class SlidersController : ControllerBase
+    public class ProductImagesController : ControllerBase
     {
-        private readonly IService<Slider> _service;
+        private readonly IService<ProductImage> _service;
 
-        public SlidersController(IService<Slider> service)
+        public ProductImagesController(IService<ProductImage> service)
         {
             _service = service;
         }
 
-        // GET: api/<SlidersController>
+        // GET: api/<ProductImagesController>
         [HttpGet]
-        public async Task<IEnumerable<Slider>> Get()
+        public async Task<IEnumerable<ProductImage>> Get()
         {
             return await _service.GetAllAsync();
         }
 
-        // GET api/<SlidersController>/5
+        // GET api/<ProductImagesController>/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Slider>> GetAsync(int id)
+        public async Task<ActionResult<ProductImage>> GetAsync(int id)
         {
             var model = await _service.FindAsync(id);
             if (model == null)
@@ -34,23 +34,26 @@ namespace SH1ProjeUygulamasi.WebAPI.Controllers
             return Ok(model);
         }
 
-        // POST api/<SlidersController>
+        // POST api/<ProductImagesController>
         [HttpPost]
-        public async Task PostAsync([FromBody] Slider value)
+        public async Task<ActionResult<ProductImage>> PostAsync([FromBody] ProductImage value)
         {
             await _service.AddAsync(value);
             await _service.SaveChangesAsync();
+
+            return Ok(value);
         }
 
-        // PUT api/<SlidersController>/5
+        // PUT api/<ProductImagesController>/5
         [HttpPut("{id}")]
-        public async Task PutAsync(int id, [FromBody] Slider value)
+        public async Task<ActionResult<ProductImage>> PutAsync(int id, [FromBody] ProductImage value)
         {
             _service.Update(value);
             await _service.SaveChangesAsync();
+            return Ok(value);
         }
 
-        // DELETE api/<SlidersController>/5
+        // DELETE api/<ProductImagesController>/5
         [HttpDelete("{id}")]
         public async Task<ActionResult> DeleteAsync(int id)
         {
