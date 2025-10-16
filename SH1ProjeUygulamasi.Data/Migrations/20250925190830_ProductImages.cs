@@ -36,7 +36,7 @@ namespace SH1ProjeUygulamasi.Data.Migrations
                 keyColumn: "Id",
                 keyValue: 1,
                 column: "CreateDate",
-                value: new DateTime(2025, 9, 25, 22, 8, 28, 911, DateTimeKind.Local).AddTicks(8266));
+                value: new DateTime(2025, 9, 25, 22, 8, 13, 281, DateTimeKind.Local).AddTicks(6461));
 
             migrationBuilder.CreateIndex(
                 name: "IX_ProductImages_ProductId",
@@ -55,7 +55,7 @@ namespace SH1ProjeUygulamasi.Data.Migrations
                 keyColumn: "Id",
                 keyValue: 1,
                 column: "CreateDate",
-                value: new DateTime(2025, 9, 23, 22, 41, 54, 697, DateTimeKind.Local).AddTicks(8992));
+                value: new DateTime(2025, 9, 22, 21, 34, 21, 266, DateTimeKind.Local).AddTicks(4767));
         }
     }
 }

@@ -1,4 +1,4 @@
-
+﻿
 using SH1ProjeUygulamasi.Data;
 using SH1ProjeUygulamasi.Service.Abstract;
 using SH1ProjeUygulamasi.Service.Concrete;
@@ -24,6 +24,14 @@ namespace SH1ProjeUygulamasi.WebAPI
             builder.Services.AddScoped<IUserService, UserService>();
             builder.Services.AddScoped(typeof(IService<>), typeof(Service<>)); // Generic Servis
 
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("default", policy =>
+                {
+                    policy.AllowAnyHeader().AllowAnyOrigin().AllowAnyMethod(); // cors hatas�na tak�lan t�m istekleri kabul et
+                });
+            });
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -36,6 +44,7 @@ namespace SH1ProjeUygulamasi.WebAPI
 
             app.UseAuthorization();
 
+            app.UseCors("default");
 
             app.MapControllers();
 
