@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SH1ProjeUygulamasi.Core.Entities;
+using System.Security.Cryptography.X509Certificates;
 
 namespace SH1ProjeUygulamasi.WebAPIUsing.Controllers
 {
@@ -31,6 +32,11 @@ namespace SH1ProjeUygulamasi.WebAPIUsing.Controllers
             var productImages = await _httpClient.GetFromJsonAsync<List<ProductImage>>($"{_apiAdres}ProductImages/GetProductImagesByProductId/{id}");
             model.ProductImages = productImages;
             return View(model);
+          
+        }
+        public IActionResult FetchCrud()
+        {
+            return View();
         }
     }
 }
