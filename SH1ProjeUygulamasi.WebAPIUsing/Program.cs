@@ -1,4 +1,4 @@
-ï»¿using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using System.Security.Claims;
 
 namespace SH1ProjeUygulamasi.WebAPIUsing
@@ -14,7 +14,7 @@ namespace SH1ProjeUygulamasi.WebAPIUsing
 
             builder.Services.AddSession();
 
-            builder.Services.AddHttpClient(); // HttpClient ï¿½ dependency injection olarak kulanabilmek iï¿½in bu ï¿½ekilde servisini ekliyoru.
+            builder.Services.AddHttpClient(); // HttpClient ý dependency injection olarak kulanabilmek için bu þekilde servisini ekliyoru.
 
             builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie();
 

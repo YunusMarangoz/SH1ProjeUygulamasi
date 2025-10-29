@@ -8,13 +8,12 @@ namespace SH1ProjeUygulamasi.WebAPIUsing.Areas.Admin.Controllers
 {
     [Area("Admin")]
     [Authorize(Policy = "AdminPolicy")]
-
     public class ProductImagesController : Controller
     {
         private readonly HttpClient _httpClient;
 
-        static string _apiAdres = "http://localhost:5221/Api/ProductImages";
-        static string _apiAdres2 = "http://localhost:5221/Api/Products";
+        static string _apiAdres = "http://localhost:5018/Api/ProductImages";
+        static string _apiAdres2 = "http://localhost:5018/Api/Products";
         public ProductImagesController(HttpClient httpClient)
         {
             _httpClient = httpClient;

@@ -9,7 +9,7 @@ namespace SH1ProjeUygulamasi.WebAPIUsing.Areas.Admin.Controllers
     [Authorize(Policy = "AdminPolicy")]
     public class BrandsController : Controller
     {
-        static string _apiAdres = "http://localhost:5221/Api/Brands";
+        static string _apiAdres = "http://localhost:5018/Api/Brands";
         HttpClient _httpClient = new HttpClient();
         // GET: BrandsController
         public async Task<ActionResult> Index()

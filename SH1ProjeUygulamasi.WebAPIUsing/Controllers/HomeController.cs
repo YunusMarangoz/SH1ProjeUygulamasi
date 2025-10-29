@@ -1,4 +1,4 @@
-ï»¿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using SH1ProjeUygulamasi.Core.Entities;
 using SH1ProjeUygulamasi.WebAPIUsing.Models;
 using SH1ProjeUygulamasi.WebAPIUsing.Tools;
@@ -15,7 +15,7 @@ namespace SH1ProjeUygulamasi.WebAPIUsing.Controllers
             _httpClient = httpClient;
         }
 
-        static string _apiAdres = "http://localhost:5221/Api/";
+        static string _apiAdres = "http://localhost:5018/Api/";
 
         public async Task<IActionResult> IndexAsync()
         {
@@ -32,25 +32,6 @@ namespace SH1ProjeUygulamasi.WebAPIUsing.Controllers
             return View();
         }
 
-        public IActionResult JsileAPIKullanimOrnegi()
-        {
-            return View();
-        }
-
-        public IActionResult Detail(int? id)
-        {
-            if (id is null)
-            {
-                return BadRequest("Geï¿½ersiz ï¿½stek!");
-            }
-            return View();
-        }
-
-        public IActionResult Brands()
-        {
-            return View();
-        }
-
         public IActionResult ContactUs()
         {
             return View();
@@ -63,14 +44,14 @@ namespace SH1ProjeUygulamasi.WebAPIUsing.Controllers
             {
                 MailHelper.SendMail("mail@gmail.com", "Siteden email geldi", mesaj);
                 TempData["Message"] = @"<div class=""alert alert-success alert-dismissible fade show"" role=""alert"">
-  <strong>Teï¿½ekkï¿½rler.. Mesajï¿½nï¿½z Gï¿½nderildi!</strong> 
+  <strong>Teþekkürler.. Mesajýnýz Gönderildi!</strong> 
   <button type=""button"" class=""btn-close"" data-bs-dismiss=""alert"" aria-label=""Close""></button>
 </div> ";
             }
             catch (Exception)
             {
                 TempData["Message"] = @"<div class=""alert alert-danger alert-dismissible fade show"" role=""alert"">
-  <strong>Hata Oluï¿½tu! Mesaj Gï¿½nderilemedi!</strong> 
+  <strong>Hata Oluþtu! Mesaj Gönderilemedi!</strong> 
   <button type=""button"" class=""btn-close"" data-bs-dismiss=""alert"" aria-label=""Close""></button>
 </div> ";
             }

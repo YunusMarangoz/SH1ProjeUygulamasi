@@ -1,4 +1,5 @@
-﻿@{
+﻿
+@{
     ViewData["Title"] = "Marka Yönetimi";
 }
 
@@ -56,11 +57,22 @@
     </div>
 </div>
 
-@section scripts {
+@section scripts{
     <script>
-        var apiUrl = 'http://localhost:5221/Api/';
+        var apiUrl = 'http://localhost:5018/Api/';
+
+        var token = localStorage.getItem("token");
+        var refreshToken = sessionStorage.refreshToken;
+        var userExpiration = sessionStorage["userExpiration"];
+
         function GetAll() {
-            fetch(apiUrl + 'Brands')
+            fetch(apiUrl + 'Brands', {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': 'Bearer ' + token
+                }
+            })
                 .then(response => response.json()) // JSON olarak dönüştür
                 .then(data => {
                     // console.log(data);
@@ -144,7 +156,7 @@
                     document.getElementById("Description").value = item.description;
                     document.getElementById("LogoName").value = item.logo;
                     document.getElementById("IsActive").checked = item.isActive;
-                    document.getElementById("brandLogo").innerHTML = "<img src='http://localhost:5221/Images/" + item.logo + "' height='50'>";
+                    document.getElementById("brandLogo").innerHTML = "<img src='http://localhost:5018/Images/" + item.logo + "' height='50'>";
                     document.getElementById("btnGuncelle").disabled = false;
                 })
                 .catch(error => {

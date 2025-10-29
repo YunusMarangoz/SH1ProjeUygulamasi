@@ -12,7 +12,7 @@ namespace SH1ProjeUygulamasi.WebAPIUsing.Controllers
             _httpClient = httpClient;
         }
 
-        static string _apiAdres = "http://localhost:5221/Api/";
+        static string _apiAdres = "http://localhost:5018/Api/";
         public async Task<IActionResult> IndexAsync(int? id)
         {
             if (id == null) // eğer adres çubuğundan id gelmezse

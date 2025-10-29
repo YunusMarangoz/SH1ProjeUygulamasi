@@ -237,7 +237,7 @@ namespace SH1ProjeUygulamasi.Data.Migrations
                         new
                         {
                             Id = 1,
-                            CreateDate = new DateTime(2025, 10, 15, 22, 55, 39, 333, DateTimeKind.Local).AddTicks(7226),
+                            CreateDate = new DateTime(2025, 10, 15, 21, 18, 18, 987, DateTimeKind.Local).AddTicks(3146),
                             Email = "admin@yahoo.co",
                             IsActive = true,
                             IsAdmin = true,

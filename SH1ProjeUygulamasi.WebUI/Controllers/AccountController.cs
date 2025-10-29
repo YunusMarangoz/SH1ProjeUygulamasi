@@ -82,7 +82,7 @@ namespace SH1ProjeUygulamasi.WebUI.Controllers
                 catch (Exception)
                 {
                     ModelState.AddModelError("", "Kayıt sırasında bir hata oluştu!");
-                }
+                }                
             }
             return View(user);
         }

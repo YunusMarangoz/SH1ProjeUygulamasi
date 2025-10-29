@@ -11,8 +11,8 @@ namespace SH1ProjeUygulamasi.WebAPIUsing.Areas.Admin.Controllers
     public class ProductsController : Controller
     {
         private readonly HttpClient _httpClient;
-        static string _apiAdres = "http://localhost:5221/Api/Products";
-        static string _apiAdres2 = "http://localhost:5221/Api/Categories";
+        static string _apiAdres = "http://localhost:5018/Api/Products";
+        static string _apiAdres2 = "http://localhost:5018/Api/Categories";
         public ProductsController(HttpClient httpClient)
         {
             _httpClient = httpClient;
@@ -141,7 +141,7 @@ namespace SH1ProjeUygulamasi.WebAPIUsing.Areas.Admin.Controllers
         {
             var kategoriler = await _httpClient.GetFromJsonAsync<List<Category>>(_apiAdres2);
             ViewBag.CategoryId = new SelectList(kategoriler, "Id", "Name");
-            var markalar = await _httpClient.GetFromJsonAsync<List<Brand>>("http://localhost:5221/Api/brands");
+            var markalar = await _httpClient.GetFromJsonAsync<List<Brand>>("http://localhost:5018/Api/brands");
             ViewBag.BrandId = new SelectList(markalar, "Id", "Name");
         }
     }

@@ -39,7 +39,7 @@ namespace SH1ProjeUygulamasi.Data.Migrations
                 keyColumn: "Id",
                 keyValue: 1,
                 column: "CreateDate",
-                value: new DateTime(2025, 10, 15, 22, 55, 39, 333, DateTimeKind.Local).AddTicks(7226));
+                value: new DateTime(2025, 10, 15, 21, 18, 18, 987, DateTimeKind.Local).AddTicks(3146));
 
             migrationBuilder.CreateIndex(
                 name: "IX_Products_BrandId",
@@ -77,7 +77,7 @@ namespace SH1ProjeUygulamasi.Data.Migrations
                 keyColumn: "Id",
                 keyValue: 1,
                 column: "CreateDate",
-                value: new DateTime(2025, 9, 25, 22, 8, 28, 911, DateTimeKind.Local).AddTicks(8266));
+                value: new DateTime(2025, 9, 25, 22, 8, 13, 281, DateTimeKind.Local).AddTicks(6461));
         }
     }
 }

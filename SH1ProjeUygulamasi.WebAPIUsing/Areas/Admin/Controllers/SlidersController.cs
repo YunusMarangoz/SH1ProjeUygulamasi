@@ -12,11 +12,12 @@ namespace SH1ProjeUygulamasi.WebAPIUsing.Areas.Admin.Controllers
     {
         private readonly HttpClient _httpClient;
 
-        static string _apiAdres = "http://localhost:5221/Api/Sliders";        
+        static string _apiAdres = "http://localhost:5018/Api/Sliders";
         public SlidersController(HttpClient httpClient)
         {
             _httpClient = httpClient;
         }
+
         // GET: SlidersController
         public async Task<ActionResult> Index()
         {

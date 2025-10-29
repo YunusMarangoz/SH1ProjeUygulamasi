@@ -1,4 +1,4 @@
-ï»¿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using SH1ProjeUygulamasi.Core.Entities;
 using SH1ProjeUygulamasi.Data;
 using SH1ProjeUygulamasi.Service.Abstract;
@@ -16,7 +16,7 @@ namespace SH1ProjeUygulamasi.WebUI.Controllers
         //{
         //    _context = context;
         //}
-        private readonly IService<Slider> _serviceSlider; // generic servis kullanï¿½mï¿½
+        private readonly IService<Slider> _serviceSlider; // generic servis kullanýmý
         private readonly IProductService _productService;
 
         public HomeController(IService<Slider> serviceSlider, IProductService productService)
@@ -52,18 +52,18 @@ namespace SH1ProjeUygulamasi.WebUI.Controllers
             {
                 MailHelper.SendMail("mail@gmail.com", "Siteden email geldi", mesaj);
                 TempData["Message"] = @"<div class=""alert alert-success alert-dismissible fade show"" role=""alert"">
-  <strong>Teï¿½ekkï¿½rler.. Mesajï¿½nï¿½z Gï¿½nderildi!</strong> 
+  <strong>Teþekkürler.. Mesajýnýz Gönderildi!</strong> 
   <button type=""button"" class=""btn-close"" data-bs-dismiss=""alert"" aria-label=""Close""></button>
 </div> ";
             }
             catch (Exception)
             {
                 TempData["Message"] = @"<div class=""alert alert-danger alert-dismissible fade show"" role=""alert"">
-  <strong>Hata Oluï¿½tu! Mesaj Gï¿½nderilemedi!</strong> 
+  <strong>Hata Oluþtu! Mesaj Gönderilemedi!</strong> 
   <button type=""button"" class=""btn-close"" data-bs-dismiss=""alert"" aria-label=""Close""></button>
 </div> ";
             }
-
+            
             return RedirectToAction("ContactUs");
         }
 

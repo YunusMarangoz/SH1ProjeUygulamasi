@@ -12,7 +12,7 @@ using SH1ProjeUygulamasi.Data;
 namespace SH1ProjeUygulamasi.Data.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20250923194156_IsHomeEklendi")]
+    [Migration("20250922183422_IsHomeEklendi")]
     partial class IsHomeEklendi
     {
         /// <inheritdoc />
@@ -182,7 +182,7 @@ namespace SH1ProjeUygulamasi.Data.Migrations
                         new
                         {
                             Id = 1,
-                            CreateDate = new DateTime(2025, 9, 23, 22, 41, 54, 697, DateTimeKind.Local).AddTicks(8992),
+                            CreateDate = new DateTime(2025, 9, 22, 21, 34, 21, 266, DateTimeKind.Local).AddTicks(4767),
                             Email = "admin@yahoo.co",
                             IsActive = true,
                             IsAdmin = true,

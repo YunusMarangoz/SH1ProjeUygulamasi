@@ -22,7 +22,7 @@ namespace SH1ProjeUygulamasi.Service.Concrete
 
         public async Task AddAsync(T entity)
         {
-            await _context.AddAsync(entity);
+           await _context.AddAsync(entity);
         }
 
         public void Delete(T entity)

@@ -1,9 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SH1ProjeUygulamasi.Core.Entities;
 using SH1ProjeUygulamasi.WebAPIUsing.Tools;
-using System.Threading.Tasks;
 
 namespace SH1ProjeUygulamasi.WebAPIUsing.Areas.Admin.Controllers
 {
@@ -11,9 +9,10 @@ namespace SH1ProjeUygulamasi.WebAPIUsing.Areas.Admin.Controllers
     [Authorize(Policy = "AdminPolicy")]
     public class CategoriesController : Controller
     {
-        static string _apiAdres = "http://localhost:5221/Api/Categories";       
+        static string _apiAdres = "http://localhost:5018/Api/Categories";
         HttpClient _httpClient = new HttpClient(); // .net framework deki yapıyı kullanarak
-                                                   // GET: CategoriesController
+
+        // GET: CategoriesController
         public async Task<ActionResult> Index()
         {
             var model = await _httpClient.GetFromJsonAsync<List<Category>>(_apiAdres);

@@ -10,7 +10,7 @@ namespace SH1ProjeUygulamasi.WebAPIUsing.Areas.Admin.Controllers
     {
         private readonly HttpClient _httpClient;
 
-        static string _apiAdres = "http://localhost:5221/Api/Users";
+        static string _apiAdres = "http://localhost:5018/Api/Users";
         public UsersController(HttpClient httpClient)
         {
             _httpClient = httpClient;

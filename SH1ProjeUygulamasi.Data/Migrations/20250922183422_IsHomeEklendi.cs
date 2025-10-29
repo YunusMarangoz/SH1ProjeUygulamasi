@@ -23,7 +23,7 @@ namespace SH1ProjeUygulamasi.Data.Migrations
                 keyColumn: "Id",
                 keyValue: 1,
                 columns: new[] { "CreateDate", "UserGuid" },
-                values: new object[] { new DateTime(2025, 9, 23, 22, 41, 54, 697, DateTimeKind.Local).AddTicks(8992), null });
+                values: new object[] { new DateTime(2025, 9, 22, 21, 34, 21, 266, DateTimeKind.Local).AddTicks(4767), null });
         }
 
         /// <inheritdoc />

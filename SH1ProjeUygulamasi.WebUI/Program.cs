@@ -1,4 +1,4 @@
-ï»¿using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using SH1ProjeUygulamasi.Data;
 using SH1ProjeUygulamasi.Service.Abstract;
 using SH1ProjeUygulamasi.Service.Concrete;
@@ -19,12 +19,12 @@ namespace SH1ProjeUygulamasi.WebUI
 
             builder.Services.AddDbContext<DatabaseContext>();
 
-            builder.Services.AddScoped<ICategoryService, CategoryService>(); // Uygulamaya ICategoryService i kullanma isteï¿½i gelirse CategoryService sï¿½nï¿½fï¿½ndan bir nesne oluï¿½tur ve onu kullan.
+            builder.Services.AddScoped<ICategoryService, CategoryService>(); // Uygulamaya ICategoryService i kullanma isteði gelirse CategoryService sýnýfýndan bir nesne oluþtur ve onu kullan.
 
             // builder.Services.AddSingleton<ICategoryService, CategoryService>();
             // builder.Services.AddTransient<ICategoryService, CategoryService>();
 
-            builder.Services.AddTransient<IProductService, ProductService>(); // Servisi buraya tanï¿½tmazsak hata alï¿½rï¿½z!!!
+            builder.Services.AddTransient<IProductService, ProductService>(); // Servisi buraya tanýtmazsak hata alýrýz!!!
 
             builder.Services.AddScoped<IUserService, UserService>();
 

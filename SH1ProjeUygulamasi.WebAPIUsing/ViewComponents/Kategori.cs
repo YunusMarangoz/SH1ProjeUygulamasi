@@ -5,7 +5,7 @@ namespace SH1ProjeUygulamasi.WebAPIUsing.ViewComponents
 {
     public class Kategori : ViewComponent
     {
-        static string _apiAdres = "http://localhost:5221/Api/Categories";
+        static string _apiAdres = "http://localhost:5018/Api/Categories";
         HttpClient _httpClient = new();
 
         public async Task<IViewComponentResult> InvokeAsync()
